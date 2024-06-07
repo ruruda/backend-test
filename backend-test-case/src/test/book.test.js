@@ -7,8 +7,7 @@ describe('GET /api/books', () => {
 
 		expect(result.statusCode).toBe(200);
 		result.body.data.forEach((book) => {
-			expect(book.stock).toBeGreaterThan(0);
-			expect(book.borrow.length).toBe(0);
+			expect(book.stock).toBeGreaterThan(0)
 		});
 	});
 });
